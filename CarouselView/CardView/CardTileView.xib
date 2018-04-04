@@ -64,7 +64,8 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.81426293319000331" green="0.92673102485339542" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" red="0.020418089043575893" green="0.65705378346676802" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="6qS-QC-OZz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6yE-RC-E0Y"/>
                 <constraint firstItem="aSt-Wr-4vQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="8e1-G4-gPK"/>
@@ -83,9 +84,6 @@
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                     <real key="value" value="5"/>
-                </userDefinedRuntimeAttribute>
-                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                    <real key="value" value="2"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="33" y="156.5"/>
