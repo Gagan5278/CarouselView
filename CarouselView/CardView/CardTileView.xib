@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+        <array key="din-regular.ttf">
+            <string>DIN-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardTileView" customModule="CarouselView" customModuleProvider="target">
+            <connections>
+                <outlet property="cardNameLabel" destination="6qS-QC-OZz" id="6PW-9E-Wbo"/>
+                <outlet property="cardNumberLabel" destination="0HO-zu-bpv" id="8bR-w0-PYf"/>
+                <outlet property="cardStatusLabel" destination="9Bn-pc-z2f" id="nXd-Jn-nqe"/>
+                <outlet property="cardTypeLabel" destination="c1Q-7N-RZx" id="HFL-zr-LKf"/>
+                <outlet property="cardView" destination="iN0-l3-epB" id="h4T-Qn-woL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="138"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----- WALTER PRATT ------   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qS-QC-OZz">
+                    <rect key="frame" x="60" y="33" width="180" height="16.5"/>
+                    <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="xxxx xxxx xxxx 1234         " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0HO-zu-bpv">
+                    <rect key="frame" x="12" y="76" width="141.5" height="14"/>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="Page" translatesAutoresizingMaskIntoConstraints="NO" id="aSt-Wr-4vQ">
+                    <rect key="frame" x="139.5" y="8" width="21" height="15"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" STATUS: ACTIVE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="9Bn-pc-z2f">
+                    <rect key="frame" x="12" y="107" width="276" height="21"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="yKo-oj-sux"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="DIN-Regular" family="DIN-Regular" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aerican Express" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1Q-7N-RZx">
+                    <rect key="frame" x="12" y="59" width="87" height="14"/>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6qS-QC-OZz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6yE-RC-E0Y"/>
+                <constraint firstItem="aSt-Wr-4vQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="8e1-G4-gPK"/>
+                <constraint firstItem="aSt-Wr-4vQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FCe-hR-Dwh"/>
+                <constraint firstItem="c1Q-7N-RZx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="R9p-Lt-qjT"/>
+                <constraint firstItem="c1Q-7N-RZx" firstAttribute="top" secondItem="6qS-QC-OZz" secondAttribute="bottom" constant="10" id="WTK-0G-NLF"/>
+                <constraint firstItem="0HO-zu-bpv" firstAttribute="top" secondItem="c1Q-7N-RZx" secondAttribute="bottom" constant="3" id="eMg-Wo-bQf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9Bn-pc-z2f" secondAttribute="trailing" constant="12" id="lZH-Uc-ZJC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9Bn-pc-z2f" secondAttribute="bottom" constant="10" id="m2h-gy-lr4"/>
+                <constraint firstItem="0HO-zu-bpv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="seW-EY-ihz"/>
+                <constraint firstItem="0HO-zu-bpv" firstAttribute="leading" secondItem="9Bn-pc-z2f" secondAttribute="leading" id="uEm-GG-fST"/>
+                <constraint firstItem="6qS-QC-OZz" firstAttribute="top" secondItem="aSt-Wr-4vQ" secondAttribute="bottom" constant="10" id="v7v-Pp-9V6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="5"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                    <real key="value" value="2"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="33" y="156.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Page" width="21" height="15"/>
+    </resources>
+</document>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mea-OW-3fV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="vT4-4M-Nwk">
+            <objects>
+                <viewController id="mea-OW-3fV" customClass="ViewController" customModule="CarouselView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fjw-XB-YP0"/>
+                        <viewControllerLayoutGuide type="bottom" id="B6r-q6-Abq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qx1-Hn-AOK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qSM-fW-VEd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <color key="backgroundColor" red="0.62264198059999998" green="0.65075778959999997" blue="0.67160034179999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="6Sy-Rp-gMW"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="O33-2o-HSR">
+                                    <size key="itemSize" width="374" height="155"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="gzV-fO-47X" customClass="CollectionViewCell" customModule="Multiply" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="30" width="374" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cre-3R-p8A" customClass="CardTileView" customModule="Multiply" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="140"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="6"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Cre-3R-p8A" secondAttribute="bottom" id="QGF-eX-Ivp"/>
+                                            <constraint firstItem="Cre-3R-p8A" firstAttribute="top" secondItem="gzV-fO-47X" secondAttribute="top" id="U9r-kz-g2d"/>
+                                            <constraint firstAttribute="trailing" secondItem="Cre-3R-p8A" secondAttribute="trailing" id="tQY-QS-gQq"/>
+                                            <constraint firstItem="Cre-3R-p8A" firstAttribute="leading" secondItem="gzV-fO-47X" secondAttribute="leading" id="y9F-p1-U6W"/>
+                                        </constraints>
+                                        <size key="customSize" width="374" height="140"/>
+                                        <connections>
+                                            <outlet property="cardTileView" destination="Cre-3R-p8A" id="cts-r6-h0R"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="mea-OW-3fV" id="xDV-Qa-Cu5"/>
+                                    <outlet property="delegate" destination="mea-OW-3fV" id="wpf-9T-W5T"/>
+                                </connections>
+                            </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ku3-El-ibM">
+                                <rect key="frame" x="87" y="30" width="200" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="NdQ-OM-BxU"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="mea-OW-3fV" id="SB4-kV-7WE"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="t0C-Yc-46c">
+                                <rect key="frame" x="168" y="165" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="currentPageIndicatorTintColor" red="0.0021418875549999998" green="0.54686760899999998" blue="0.70130163430000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FUb-fi-xqP">
+                                <rect key="frame" x="0.0" y="192" width="375" height="475"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardActionDetail" rowHeight="50" id="CzV-uF-Tbb">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CzV-uF-Tbb" id="Q2d-ap-9gM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="mea-OW-3fV" id="KaU-PI-pyT"/>
+                                    <outlet property="delegate" destination="mea-OW-3fV" id="GCe-Aw-Lqd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t0C-Yc-46c" firstAttribute="centerX" secondItem="qx1-Hn-AOK" secondAttribute="centerX" id="2Ky-aD-b0x"/>
+                            <constraint firstItem="t0C-Yc-46c" firstAttribute="top" secondItem="qSM-fW-VEd" secondAttribute="bottom" constant="-35" id="5Cb-cy-vgq"/>
+                            <constraint firstItem="FUb-fi-xqP" firstAttribute="trailing" secondItem="jE3-aw-W17" secondAttribute="trailing" id="IV7-Vv-jip"/>
+                            <constraint firstItem="ku3-El-ibM" firstAttribute="centerY" secondItem="qSM-fW-VEd" secondAttribute="centerY" id="N4a-Fu-Dct"/>
+                            <constraint firstItem="ku3-El-ibM" firstAttribute="centerX" secondItem="qx1-Hn-AOK" secondAttribute="centerX" id="QFp-hO-zzp"/>
+                            <constraint firstItem="qSM-fW-VEd" firstAttribute="leading" secondItem="jE3-aw-W17" secondAttribute="leading" id="SwK-h8-dPs"/>
+                            <constraint firstItem="B6r-q6-Abq" firstAttribute="top" secondItem="FUb-fi-xqP" secondAttribute="bottom" id="cN1-UL-hYG"/>
+                            <constraint firstItem="qSM-fW-VEd" firstAttribute="top" secondItem="jE3-aw-W17" secondAttribute="top" constant="-20" id="esh-KT-ya5"/>
+                            <constraint firstItem="FUb-fi-xqP" firstAttribute="leading" secondItem="jE3-aw-W17" secondAttribute="leading" id="ic0-xy-hNU"/>
+                            <constraint firstItem="FUb-fi-xqP" firstAttribute="top" secondItem="t0C-Yc-46c" secondAttribute="bottom" constant="-10" id="jVm-MR-FEd"/>
+                            <constraint firstItem="ku3-El-ibM" firstAttribute="centerX" secondItem="qSM-fW-VEd" secondAttribute="centerX" id="kdM-Ve-fjt"/>
+                            <constraint firstItem="qSM-fW-VEd" firstAttribute="trailing" secondItem="jE3-aw-W17" secondAttribute="trailing" id="reE-mX-XJJ"/>
+                            <constraint firstItem="ku3-El-ibM" firstAttribute="top" secondItem="Fjw-XB-YP0" secondAttribute="bottom" constant="10" id="z69-zq-erB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jE3-aw-W17"/>
+                    </view>
+                    <connections>
+                        <outlet property="actionDetailTableView" destination="FUb-fi-xqP" id="NQm-dE-fCd"/>
+                        <outlet property="collectionView" destination="qSM-fW-VEd" id="zCc-Lq-u8X"/>
+                        <outlet property="containerScrollView" destination="ku3-El-ibM" id="1hn-kK-QAt"/>
+                        <outlet property="pageControl" destination="t0C-Yc-46c" id="gYB-ng-0A3"/>
+                        <outlet property="scrollViewWidthContraint" destination="NdQ-OM-BxU" id="vYC-bT-Lpo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D7E-PH-Cue" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937" y="60"/>
+        </scene>
+    </scenes>
+</document>
