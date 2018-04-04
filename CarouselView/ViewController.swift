@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  CarouselView
 //
-//  Created by Sharat on 02/04/18.
+//  Created by Gagan Vishal on 02/04/18.
 //  Copyright © 2018 Gagan Vishal. All rights reserved.
 //
 
